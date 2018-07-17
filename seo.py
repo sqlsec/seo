@@ -30,7 +30,7 @@ def main():
             }
             data = 'm=&host={domain}'.format(domain=domain)
             try:
-                response = requests.post(url=url,headers=headers,data=data,timeout=2)
+                response = requests.post(url=url,headers=headers,data=data,timeout=10)
                 html = response.text
 
                 # 百度权重正则

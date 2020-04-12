@@ -1,3 +1,0 @@
-requests==2.19.1
-prettytable==7
-progressbar2==3.38.0

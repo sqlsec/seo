@@ -1,14 +1,13 @@
 # 简介
 
-Python3 实现批量查询网站的百度权重以及收录情况，利用的是站长之家的SEO查询接口，所以本脚本相当于是一个爬虫，用来批量提取数据信息。
+Python3编写的一个批量查询SEO的小脚本，没想到我的代码这么烂居然还有朋友 star ，国光今天看了下代码，看不下去了，于是重写了一下，这次加入了进程池，执行速度比以前快很多，而且去掉了花里胡哨的进度条和表格输出，直接用原生的 print 然后手动`ljust(30)`对齐，大道至简！
 
 # 依赖安装
 
 到项目下使用`pip`来安装相关依赖
 
-```shell
-cd seo/
-pip install -r requirements.txt
+```bash
+pip install requests
 ```
 
 # 使用方法
@@ -19,6 +18,11 @@ pip install -r requirements.txt
 python3 seo.py -r /Users/sqlsec/Temp/domain.txt
 ```
 
-# 脚本演示
+![image-20200412151928878](imgs/image-20200412151928878.png)  
 
-![](http://image.3001.net/images/20180717/15318170426637.png)  
+# 性能对比
+
+没有进程池查询100个域名耗时：`138.7033` 秒
+
+使用进程池查询100个域名耗时：`4.4753` 秒 
+
